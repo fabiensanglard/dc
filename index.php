@@ -16,7 +16,7 @@ It was an equally enjoyable experience when I took on C++. I found myself unable
 A contrasting experience was to learn how to use the tools to turn my programs into executable. It was a painfully slow and deeply unpleasant process where knowledge was gathered here and there after trial, errors, and a lot of time spent on search engines. It felt like acquiring the same level of comfort to use a compiler took significantly more than learning the language.
 </p>
 <p>
-I blame this experience on the lack of literature on the topic. Most language books start with a "Hello World" code sample. In the case of K&amp;R, it would be <a href="src/hello.c"><code>hello.c</code></a>.
+I blame this experience on the lack of literature on the topic. Most language books start with a "Hello World" code sample. In the case of K&amp;R, it would be <code>hello.c</code>.
 </p>
 
 <pre>#include &lt;stdio.h&gt;

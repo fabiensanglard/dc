@@ -349,7 +349,7 @@ So far, it looks like the header system works well. Each source file becomes a t
 <table>
 <tr>
 <td>
-<pre>// <a href="src/render.h">engine.h</a>
+<pre>// engine.h
 
 struct World {
 }; 
@@ -361,7 +361,7 @@ struct World {
 </pre>
 </td>
 <td>
-<pre>// <a href="src/ai.h">ai.h</a>
+<pre>// ai.h
  
 #include "engine.h"
 
@@ -373,7 +373,7 @@ void think(World& world);
 </pre>
 </td>
 <td>
-  <pre>// <a href="src/render.h">render.h</a>
+  <pre>// render.h
 
 #include "engine.h"
 
@@ -389,7 +389,7 @@ void render(World& world);
 
 <tr>
 <td>
-<pre>// <a href="src/engine.cc">engine.cc</a>
+<pre>// engine.cc
 
 #include "engine.h"
 #include "render.h"
@@ -405,7 +405,7 @@ void hostFrame(World& world) {
 
 
 <td>
-<pre>// <a href="src/ai.cc">ai.cc</a>
+<pre>// ai.cc
 
 #include "ai.h"
 
@@ -419,7 +419,7 @@ void think(World& world) {
 </pre>
 </td>
 <td>
-  <pre>// <a href="src/render.cc">render.cc</a>
+  <pre>// render.cc
 
 #include "render.h"
 
@@ -547,7 +547,7 @@ The solution to multiple import and import cycles is to use include guards or <c
 <table>
 <tr>
 <td>
-<pre>// <a href="src/render.h">engine.h</a>
+<pre>// engine.h
 <span class="r">#pragma once</span> // Pragma guard
 
 struct World {
@@ -560,7 +560,7 @@ struct World {
 </pre>
 </td>
 <td>
-<pre>// <a href="src/ai.h">ai.h</a>
+<pre>// ai.h
 <span class="r">#ifndef AI.H</span> // Header guard
 <span class="r">#define AI.H</span> 
 #include "engine.h"
@@ -573,7 +573,7 @@ void think(World& world);
 </pre>
 </td>
 <td>
-  <pre>// <a href="src/render.h">render.h</a>
+  <pre>// render.h
 <span class="r">#ifndef RENDERER.H</span> // Header guard
 <span class="r">#define RENDERER.H</span>
 #include "engine.h"
@@ -590,7 +590,7 @@ void render(World& world);
 
 <tr>
 <td>
-<pre>// <a href="src/engine.cc">engine.cc</a>
+<pre>// engine.cc
 
 #include "engine.h"
 #include "render.h"
@@ -606,7 +606,7 @@ void hostFrame(World& world) {
 
 
 <td>
-<pre>// <a href="src/ai.cc">ai.cc</a>
+<pre>// ai.cc
 
 #include "ai.h"
 
@@ -620,7 +620,7 @@ void think(World& world) {
 </pre>
 </td>
 <td>
-  <pre>// <a href="src/render.cc">render.cc</a>
+  <pre>// render.cc
 
 #include "render.h"
 

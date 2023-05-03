@@ -26,13 +26,13 @@ Let's start by clearing a common misconception. When talking about compilers, th
 
 <p> Turning source code into an executable is a multiple step process. It can be viewed as a pipeline where stages communicate via artifact files. 
 
-In the case of <b>K&amp;R</b>, program <a href="src/hello.c"><code>hello.c</code></a> requires three stages before the computer can greet you.
+In the case of <b>K&amp;R</b>, program <code>hello.c</code> requires three stages before the computer can greet you.
 </p>
 
 <img src="illu/driver.svg" loading=lazy width="210" height="297" style="width:100%; height: auto;" />
 
 <p>
-First the source file <a href="src/hello.c"><code>hello.c</code></a> is preprocessed into a translation unit (TU) <code>hello.tu</code>. Then the TU is compiled into an object <code>hello.o</code>. Finally the linker turns the object into an executable. Since we did not give the driver a name for the output (<code>-o</code>), the file is named <code>a.out</code>.
+First the source file <code>hello.c</code> is preprocessed into a translation unit (TU) <code>hello.tu</code>. Then the TU is compiled into an object <code>hello.o</code>. Finally the linker turns the object into an executable. Since we did not give the driver a name for the output (<code>-o</code>), the file is named <code>a.out</code>.
 </p>
 
 <p>
@@ -134,7 +134,7 @@ windres   |  Compiler for Windows resource files. </pre>
 Mastering the usage of <code>binutils</code> is a wise investment of a programmer's time. Not only is the knowledge highly reusable across the aforementioned systems, these tools are often the building block of new languages, including recent ones like <code>golang</code> and <code>rust</code>.
 </p>
 
-<p>Let's take the example of <a href="src/hello-world.go"><code>hello-world</code></a> in golang.</p>
+<p>Let's take the example of <code>hello-world</code> in golang.</p>
 <pre>package main
 import "fmt"
 
@@ -258,7 +258,7 @@ GCC precompiled header (version 013) for C
 
 
 <h2>clang++ and g++</h2>
-<p>Drivers are able to guess many things to make a programmer's life easier but they have their limits. Let's take a look at what happens when we build the C++ version of HelloWorld, <code><a href="src/hello.cc">hello.cc</a></code>.
+<p>Drivers are able to guess many things to make a programmer's life easier but they have their limits. Let's take a look at what happens when we build the C++ version of HelloWorld, <code>hello.cc</code>.
 </p>
 <pre>
 #include &lt;iostream&gt;
