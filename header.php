@@ -138,7 +138,7 @@ div.t:before {
 
 <p style="float:left;font-size: 90%;">
 By <b>Fabien Sanglard</b><br/>
-May 1st, 2023<br/>
+May 3rd, 2023<br/>
 </p>
 <p style="float:right; font-size: 90%;padding-bottom: 4ch;text-align: center;">
 <a href="https://github.com/fabiensanglard/dc">Mistake - Suggestion <br/> Feedback</a>
