@@ -76,7 +76,7 @@ This is the gap this series attempts to fill. It won't teach about a language, i
 	</tr>
 
 	<tr>
-		<td>Platform</td>
+		<td>Windows</td>
 		<td>LE.EXE</td>
 		<td>COFF</td>
 		<td>library.dll</td>
