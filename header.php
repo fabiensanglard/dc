@@ -132,7 +132,7 @@ div.t:before {
 <title>Driving Compilers</title>
 </head>
 <body>
-	<a href="/">
+	<a href="index.php">
 <h1 style="text-align: center; margin-bottom:4ch;padding-top: 1ch;">Driving Compilers</h1>
 </a>
 
