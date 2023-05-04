@@ -194,7 +194,7 @@ int fibonacci(int n) {
 <p> Adding the definition allows the compiler to work in one pass.</p>
 
 <pre>
-<b>$</b> clang -c bad_fibonacci.c // It worked
+<b>$</b> clang -c good_fibonacci.c // It worked
 </pre>
 
 
@@ -871,6 +871,7 @@ int main() {
 
 
 
+
 char* getBuffer(int size) {
   return (char*)calloc(size);
 } 
@@ -931,6 +932,7 @@ int main() {
 
 
 <span class="r">#include &lt;stdlib.h&gt;</span>
+
 
 
 
@@ -997,6 +999,7 @@ int main() {
 
 
 <span class="r">#include &lt;stdlib.h&gt;</span>
+
 
 
 
