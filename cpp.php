@@ -194,7 +194,7 @@ int fibonacci(int n) {
 <p> Adding the definition allows the compiler to work in one pass.</p>
 
 <pre>
-<b>$</b> clang -c bad_fibonacci.c // It worked
+<b>$</b> clang -c good_fibonacci.c // It worked
 </pre>
 
 
@@ -893,7 +893,7 @@ const char* getName() {
 
 
 int getLength(const char* string) {
-  returb strlen(string);
+  return strlen(string);
 } 
 </pre>
     </td>    
@@ -977,7 +977,7 @@ const char* getName() {
 
 
 int getLength(const char* string) {
-  returb strlen(string);
+  return strlen(string);
 } 
 </pre>
     </td>    
@@ -1066,7 +1066,7 @@ const char* getName() {
 
 
 int getLength(const char* string) {
-  returb strlen(string);
+  return strlen(string);
 } 
 </pre>
     </td>    
