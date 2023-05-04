@@ -245,12 +245,12 @@ As a result, linkers are highly optimized. Apple, for example, leveraged multico
 </p>
 
 <div class="t">
-Header files should not be compiled. The purpose of these files is to be included into the translation unit by the Preprocessor (described in the next chapter). If you compile a <code>.h</code>, the output will be a Precompiler Header. These files usually have a <code>.gch</code> extension.
+Header files should not be compiled. The purpose of these files is to be included into the translation unit by the Preprocessor (described in the next chapter). If you compile a <code>.h</code>, the output will be a Precompiled Header. These files usually have a <code>.gch</code> extension.
 
 <pre><b>$</b> cat foo.h
 int add(int x, int y);
 int mul(int x, int y);	
-<b>$</b> clang foo.h -0 foo.gch
+<b>$</b> clang foo.h -o foo.gch
 <b>$</b> file foo.gch
 GCC precompiled header (version 013) for C 
 </pre>
