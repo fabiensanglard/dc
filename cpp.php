@@ -832,24 +832,15 @@ hello.o: hello.c /usr/include/stdio.h /usr/include/_types.h
     <td>
 
     </td>
-    <td>
-<pre>// a.h
-
-#prama once
-
-
-
-const char* getName();
-</pre>
     </td>
     <td>
-<pre>// b.h
+<pre>// utils.h
 
 #prama once
 
-<span class="r">#include &lt;string.h&gt;</span>
+<span class="r">#include &lt;stdlib.h&gt;</span>
 
-int getLength(const char*);
+char* getBuffer(int size);
 </pre>
     </td>    
   </tr>
@@ -858,33 +849,21 @@ int getLength(const char*);
     <td>
 <pre>// main.c
 
-#include "a.h"
-#include "b.h"  
+#include "utils.h"
+
+#include &lt;stdio.h&gt;
 
 int main() {
-  char* name = getName();
-  int length = getLength(name);
-  printf("%s is %d long\n", name, length);
+  char* buffer = getBuffer(10);
+  // do stuff ...
+  free(buffer);
   return 0;
 } 
 </pre>
     </td>
+
     <td>
-<pre>// a.c  
-
-
-
-const char* name = "Fab";
-
-
-
-const char* getName() {
-  return name;
-}  
-</pre>
-    </td>
-    <td>
-<pre>// b.c  
+<pre>// utils.c  
 
 
 
@@ -892,9 +871,11 @@ const char* getName() {
 
 
 
-int getLength(const char* string) {
-  return strlen(string);
+
+char* getBuffer(int size) {
+  return (char*)calloc(size);
 } 
+
 </pre>
     </td>    
   </tr>
@@ -907,7 +888,7 @@ int getLength(const char* string) {
 
 
 
-<p>Header <code>b.h</code> includes <code>string.h</code> but it is wasteful. All source files including <code>b.h</code> now have to also include <code>string.h</code>. Moreover, the fact that <code>b.c</code> uses <code>strlen</code> is an implementation detail. Let's refactor this line.</p>
+<p>Header <code>utils.h</code> includes <code>stdlib.h</code> but it is wasteful. All source files including <code>utils.h</code> now have to also include <code>stdlib.h</code>. Moreover, the fact that <code>utils.c</code> uses <code>calloc</code> is an implementation detail. Let's refactor this line.</p>
 
 
 
@@ -916,16 +897,7 @@ int getLength(const char* string) {
     <td>
 
     </td>
-    <td>
-<pre>// a.h
-
-#prama once
-
-
-
-const char* getName();
-</pre>
-    </td>
+   
     <td>
 <pre>// b.h
 
@@ -933,7 +905,7 @@ const char* getName();
 
 
 
-int getLength(const char*);
+char* getBuffer(int size);
 </pre>
     </td>    
   </tr>
@@ -942,43 +914,33 @@ int getLength(const char*);
     <td>
 <pre>// main.c
 
-#include "a.h"
-#include "b.h"  
+#include "utils.h"
+
+#include &lt;stdio.h&gt;
 
 int main() {
-  char* name = getName();
-  int length = getLength(name);
-  printf("%s is %d long\n", name, length);
+  char* buffer = getBuffer(10);
+  // do stuff ...
+  free(buffer);
   return 0;
 } 
 </pre>
     </td>
-    <td>
-<pre>// a.c  
-
-
-
-const char* name = "Fab";
-
-
-
-const char* getName() {
-  return name;
-}  
-</pre>
-    </td>
+   
     <td>
 <pre>// b.c  
 
 
-
-<span class="r">#include &lt;string.h&gt;</span>
-
+<span class="r">#include &lt;stdlib.h&gt;</span>
 
 
-int getLength(const char* string) {
-  return strlen(string);
+
+
+
+char* getBuffer(int size) {
+  return (char*)calloc(size);
 } 
+
 </pre>
     </td>    
   </tr>
@@ -986,32 +948,23 @@ int getLength(const char* string) {
 </table>
 
 
-<p>Moving <code>string.h</code> include from the <code>.h</code> file to the <code>.c</code> file keeps the implementation details private. Let's see what happens when we try to compile.</p>
+<p>Moving <code>stdlib.h</code> include from the <code>.h</code> file to the <code>.c</code> file keeps the implementation details private. Let's see what happens when we try to compile.</p>
 
-<pre><b>$</b> clang -o main main.c a.c b.c
-<span class="r">main.c:2:3: warning: implicit declaration of function 'printf' is invalid in C99 [-Wimplicit-function-declaration]
+<pre><b>$</b> clang -o main main.c utils.c
+<span class="r">main.c:2:3: warning: implicit declaration of function 'free' is invalid in C99 [-Wimplicit-function-declaration]
 1 warning generated.
 /usr/bin/ld: /tmp/main-3866ce.o: in function `main':
-main.c:(.text+0x20): undefined reference to `printf'  
+main.c:(.text+0x20): undefined reference to `free'  
 </pre>
 
-<p>The problem is that <code>main.c</code> has a transitive dependency on <code>string.h</code>. The program compiled because <code>b.h</code> included it. As soon as it was removed, the translation unit originating from <code>main.c</code>  fails to compile. The solution is to make all source files self-reliant without  transitive header dependencies. 
+<p>The problem is that <code>main.c</code> has a transitive dependency on <code>stdlib.h</code>. The program compiled because <code>utils.h</code> included it. As soon as it was removed, the translation unit originating from <code>main.c</code>  fails to compile. The solution is to make all source files self-reliant without  transitive header dependencies. 
 
 <table>
   <tr>
     <td>
 
     </td>
-    <td>
-<pre>// a.h
-
-#prama once
-
-
-
-const char* getName();
-</pre>
-    </td>
+   
     <td>
 <pre>// b.h
 
@@ -1019,7 +972,7 @@ const char* getName();
 
 
 
-int getLength(const char*);
+char* getBuffer(int size);
 </pre>
     </td>    
   </tr>
@@ -1028,46 +981,33 @@ int getLength(const char*);
     <td>
 <pre>// main.c
 
-#include "a.h"
-#include "b.h"  
-<span class="r">#include &lt;string.h&gt;</span>
+#include "utils.h"
+<span class="r">#include &lt;stdlib.h&gt;</span>
+#include &lt;stdio.h&gt;
 
 int main() {
-  char* name = getName();
-  int length = getLength(name);
-  printf("%s is %d long\n", name, length);
+  char* buffer = getBuffer(10);
+  // do stuff ...
+  free(buffer);
   return 0;
 } 
 </pre>
     </td>
-    <td>
-<pre>// a.c  
-
-
-
-const char* name = "Fab";
-
-
-
-
-const char* getName() {
-  return name;
-}  
-</pre>
-    </td>
+   
     <td>
 <pre>// b.c  
 
 
-
-<span class="r">#include &lt;string.h&gt;</span>
-
+<span class="r">#include &lt;stdlib.h&gt;</span>
 
 
 
-int getLength(const char* string) {
-  return strlen(string);
+
+
+char* getBuffer(int size) {
+  return (char*)calloc(size);
 } 
+
 </pre>
     </td>    
   </tr>
