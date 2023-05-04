@@ -887,7 +887,7 @@ char* getBuffer(int size) {
 
 
 
-<p>Header <code>b.h</code> includes <code>stdlib.h</code> but it is wasteful. All source files including <code>utils.h</code> now have to also include <code>stdlib.h</code>. Moreover, the fact that <code>utils.c</code> uses <code>calloc</code> is an implementation detail. Let's refactor this line.</p>
+<p>Header <code>utils.h</code> includes <code>stdlib.h</code> but it is wasteful. All source files including <code>utils.h</code> now have to also include <code>stdlib.h</code>. Moreover, the fact that <code>utils.c</code> uses <code>calloc</code> is an implementation detail. Let's refactor this line.</p>
 
 
 
