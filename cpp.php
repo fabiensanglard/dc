@@ -871,7 +871,6 @@ int main() {
 
 
 
-
 char* getBuffer(int size) {
   return (char*)calloc(size);
 } 
@@ -899,7 +898,7 @@ char* getBuffer(int size) {
     </td>
    
     <td>
-<pre>// b.h
+<pre>// util.h
 
 #prama once
 
@@ -928,11 +927,10 @@ int main() {
     </td>
    
     <td>
-<pre>// b.c  
+<pre>// util.c  
 
 
 <span class="r">#include &lt;stdlib.h&gt;</span>
-
 
 
 
@@ -999,7 +997,6 @@ int main() {
 
 
 <span class="r">#include &lt;stdlib.h&gt;</span>
-
 
 
 
