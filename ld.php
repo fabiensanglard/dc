@@ -58,7 +58,7 @@ information for a processes' program image. Relocation entries are these data.
 <img style="border:none;" width=100% src="illu/elf.svg"/>
 
 
-<p>Let's compile <code>hello.c</code> and peek inside <code>hello.o</code>. </p>
+<p>Let's compile <code>hello.c</code> and peek inside <code>a.out</code>. </p>
 
 <pre>// hello.c
 
