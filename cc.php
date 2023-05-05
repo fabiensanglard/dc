@@ -491,7 +491,7 @@ int main() {
 #define NAME "foo"
 #include "template.h"
 
-const har* foo() {
+const char* foo() {
   Name<const char*> name;
   return name.get();
 }
