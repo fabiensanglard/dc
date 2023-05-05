@@ -836,7 +836,7 @@ hello.o: hello.c /usr/include/stdio.h /usr/include/_types.h
     <td>
 <pre>// utils.h
 
-#prama once
+#pragma once
 
 <span class="r">#include &lt;stdlib.h&gt;</span>
 
@@ -900,7 +900,7 @@ char* getBuffer(int size) {
     <td>
 <pre>// util.h
 
-#prama once
+#pragma once
 
 
 
@@ -966,7 +966,7 @@ main.c:(.text+0x20): undefined reference to `free'
     <td>
 <pre>// b.h
 
-#prama once
+#pragma once
 
 
 
