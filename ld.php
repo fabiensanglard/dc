@@ -540,7 +540,7 @@ int main() {
 
 
 <h2>Linker trust</h2>
-<p>There is a certain level of thrust when the linker combines object files. For example there is no verification that imported and exported symbol types match.</p>
+<p>There is a certain level of trust when the linker combines object files. For example there is no verification that imported and exported symbol types match.</p>
 
 
 <table>
@@ -577,7 +577,7 @@ const <span class=r>char*</span> i = "a string!";
 </tr>
 </table>
 
-<p>The defined type and the declared type of <code>i</code> did not match but the linker happilly combined the object files.</p>
+<p>The defined type and the declared type of <code>i</code> did not match but the linker happily combined the object files.</p>
 
 <pre><b>$</b> clang trick.c i.c
 <b>$</b> ./a.out
