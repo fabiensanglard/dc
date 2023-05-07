@@ -69,7 +69,7 @@ Lastly, and perhaps most importantly, we see the linker <code>ld</code> invocati
 
 <h2>Is <code>cc</code> a driver?</h2>
 <p>
-What is this <code>cc</code> CLI we saw in the introduction, mentioned in <b>K&amp;R</b>? It was the name of the command to invoke the compiler driver back in the '70s. These days, <code>cc</code> is no more. But usage of <code>cc</code> was widespread and since it is a convenient indirection layer, it is still used nowadays.
+What is this <code>cc</code> CLI we saw in the introduction, mentioned in <b>K&amp;R</b>? It was the name of the command to invoke the compiler driver back in the '70s. These days, <code>cc</code> is no more. But usage of <code>cc</code> was widespread and since it is a convenient indirection layer, it became <a href="https://pubs.opengroup.org/onlinepubs/7908799/xcu/cc.html">part of POSIX</a> and is still used nowadays.
 </p>
 
 

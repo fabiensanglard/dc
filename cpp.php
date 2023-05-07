@@ -36,6 +36,9 @@ The goal of the preprocessor is to ingest one source file to resolve all its hea
 <p>
 In the early days, the preprocessor was a separate executable called <code>cpp</code> (<b>C</b> <b>P</b>re<b>P</b>rocessor). Lucky us, developers have maintained it all these years, and we can still invoke it. 
 </p>
+
+
+
 <pre><b>$</b> <span class="r">cpp</span> hello.c -o hello.tu	
 </pre>
 <p>Just kidding. Using verbose mode shows that it is once again the compiler driver which uses <code>argv[0]</code> to detect it should invoke itself with <code>-E</code> parameter to behave like a preprocessor.
@@ -44,6 +47,8 @@ In the early days, the preprocessor was a separate executable called <code>cpp</
 <b>$</b> <span class="r">cpp</span> -v hello.c -o hello.tu
 clang -cc1 <span class="r">-E</span> -o hello.tu hello.c  
 </pre>  
+
+<div class="t">The extension used by compilers to store translation units can be <code>.i</code>, <code>.ii</code>, <code>.mi</code>, or even <code>.mii</code>. For simplicity, we always use <code>.tu</code>.</div>
 
 <h2>How much pre-processing occurs?</h2>
 <p>

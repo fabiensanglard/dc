@@ -33,9 +33,19 @@
 <p>The goal of the compiler is to open a translation unit, parse it, optimize it and output an object file (except in the case of LTO which is discussed later). These object files are also sometimes called relocatable.
 </p>
 
-<p>All compilers are structured the same way. They have a Frontend which ingest the text and transform it into an Intermediate Representation (IR). The IR is usually modified by optimizers before being consumed by the Backend which is in charge of generating machine specific instructions and package them into an object file format container.
-	</p>
+<p>All compilers are structured the same way with.</p>
+
+<ul>
+ <li>A Frontend which ingest the text and transform it into an Intermediate Representation (IR).</li>
+
+ <li>An Optimizer which iterates on the IR with a collection of optimizations.</li>
+ <li>A Backend which generates machine specific instructions. <code>gcc</code> generates assembly and convert it to machine code with <code>binutiols</code>'s <code>as</code> while <code>clang</code> as the assembling fully built-in.</li>
+	</ul>
+
+
 <img class="center" style="width:75%; margin-bottom: 2ch; border:0;" src="illu/SimpleCompiler.svg"/>	
+
+<p>The machine code output is packaged into an object file format container.</p>
 
 <div class="t"> Clang is a frontend which generates an IR consumed by LLVM backend. Its well documented and kinda human readable IR format has opened the door to many tools. Among them is Rust's compiler, <code>rustc</code>, which is a LLVM frontend in charge of generating LLVM IR.<br/><br/>
 	<img class="center" style="border:0;width:75%;" src="illu/LLVMCompiler1.svg"/>	
