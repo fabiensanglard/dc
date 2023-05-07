@@ -141,7 +141,7 @@ GNU ld (GNU Binutils for Ubuntu) 2.38
 
 <img src="illu/multi_driver.svg" loading=lazy width="208" height="108" style="width:100%; height: auto;"/>
 
-<p>As a result, significant optimization have targeted the linker. Efforts such as <cpde>gold</cpde> or Apple's <a href="https://developer.apple.com/videos/play/wwdc2022/110362/">WC2022</a>  multi-threaded work are among many.</p>
+<p>As a result, significant optimization have targeted the linker. Efforts such as <cpde>gold</cpde>, Apple's <a href="https://developer.apple.com/videos/play/wwdc2022/110362/">WC2022</a> multi-threaded work, or <a href="https://github.com/rui314/mold">mold</a> which claims a 30x speed increase are among many.</p>
 
 
 <h2>Incremental linking</h2>
