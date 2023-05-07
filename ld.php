@@ -602,7 +602,7 @@ ld  <span class=r>--gc-sections</span> <span class=b>--as-needed</span> /tmp/mai
 -rwxrwxr-x 1 leaf leaf <span class=r>9064</span> Apr  4 22:56 a.out*
 </pre>
 
-<div class="t"> To help keep binary size low, libc implementations usually use one source file per function. See for example Bionic's <a href="https://android.googlesource.com/platform/bionic/+/refs/heads/master/libc/bionic/">source code</a>.</div>
+<div class="t"> Libc implementations may look like they use one source file per function in order to reduce code size (<a href="https://android.googlesource.com/platform/bionic/+/refs/heads/master/libc/bionic/">bionic</a>, <a href="https://github.com/fabiensanglard/glibc">GNU libc</a>). However, this is likely to avoid inlining and allow symbol pre-emption.</div>
 
 
 <h2>Linker script</h2>
