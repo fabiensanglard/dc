@@ -692,7 +692,7 @@ void think(World& world) {
 </pre>
 </td>
 <td>
-  <pre>// render.cc<
+  <pre>// render.cc
 
 void render(World &world) {
 
