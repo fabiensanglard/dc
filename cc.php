@@ -39,7 +39,7 @@
  <li>A Frontend which ingest the text and transform it into an Intermediate Representation (IR).</li>
 
  <li>An Optimizer which iterates on the IR with a collection of optimizations.</li>
- <li>A Backend which generates machine specific instructions. <code>gcc</code> generates assembly and convert it to machine code with <code>binutiols</code>'s <code>as</code> while <code>clang</code> as the assembling fully built-in.</li>
+ <li>A Backend which generates machine specific instructions. <code>gcc</code> generates assembly and convert it to machine code with <code>binutils</code>'s <code>as</code> while <code>clang</code> has the assembling fully built-in.</li>
 	</ul>
 
 
@@ -137,7 +137,7 @@ Section Headers:
 
 
 <h2>Symbols</h2>
-<p>A relocatable lists both export symbols and import symbols. These lists are in the <code>.symbtab</code> sections, which refers to strings in the <code>.strtab</code> section.
+<p>A relocatable lists both export symbols and import symbols. These lists are in the <code>.symtab</code> sections, which refers to strings in the <code>.strtab</code> section.
 </p> 
 
 
@@ -364,8 +364,6 @@ int getNumber() {
 #include "dlfcn.h"
 #include "stdio.h"
 #include "stdlib.h"
-#include "stdio.h"
-#include "dlfcn.h"
 
 
 void* malloc(size_t sz) {
@@ -382,7 +380,7 @@ int main() {
 
 <p>This program will enter an infinite loop until it segfaults. This is because <code>dlsym</code> calls <code>malloc</code>.
 
-<pre><b>$</b> clang mymalloc.
+<pre><b>$</b> clang mymalloc.c
 <b>$</b> ./a.out
 <span class="r">Segmentation fault (core dumped)</span>
 </pre>
@@ -603,7 +601,7 @@ void foo() {};
 0000000000000000 T <span class="r">_Z3foov</span>
 </pre>
 
-<p>Thanks to mangling, C++ allows functions to have the same name. They get different symbol names thank to the parameter types. Symbols avoid function name collision via a special encoding but name mangling can lead to linking issues.
+<p>Thanks to mangling, C++ allows functions to have the same name. They get different symbol names thanks to the parameter types. Symbols avoid function name collision via a special encoding but name mangling can lead to linking issues.
 </p>
 <table style="width:100%;">
 	<tr>
