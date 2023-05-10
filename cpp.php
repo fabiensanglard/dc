@@ -183,7 +183,7 @@ int fibonacci(int n) {
 <b>$</b> clang -c bad_fibonacci.c
 <span class="r">bad_fibonacci.c:4:12: error: implicit declaration of function 'fibonacci' is invalid in C99</span>
 </pre>	
-<p><code>bad_fibonnaci</code> did not declare the function <code>fibonnaci</code> before using it which resulted in an error.</p>
+<p><code>bad_fibonacci</code> did not declare the function <code>fibonacci</code> before using it which resulted in an error.</p>
 
 <pre>//  good_fibonacci.c
 
@@ -439,7 +439,7 @@ void render(World &worldv) {
 
 </tr>
 </table>
-<p>If we attempt to generate each object file, the sub-systems <code>ia.cc</code> and <code>render.cc</code> compile fine but <code>engine.cc</code> throws an error.
+<p>If we attempt to generate each object file, the sub-systems <code>ai.cc</code> and <code>render.cc</code> compile fine but <code>engine.cc</code> throws an error.
 </p>
 
 <pre><b>$</b> clang -c -o render.o render.cc
@@ -539,7 +539,7 @@ void render(World &world) {
 </tr>
 </table>
 
-<p><code>engine.cc</code> includes <code>engine.h</code>. However <code>engine.cc</code> also includes <code>ia.h</code> which in turns also includes <code>engine.h</code>. In the final <code>cpp</code>ed translation unit, <code>engine.h</code> is included twice and the struct <code>World</code> is declared twice.
+<p><code>engine.cc</code> includes <code>engine.h</code>. However <code>engine.cc</code> also includes <code>ai.h</code> which in turns also includes <code>engine.h</code>. In the final <code>cpp</code>ed translation unit, <code>engine.h</code> is included twice and the struct <code>World</code> is declared twice.
 </p>
 
 <p>
