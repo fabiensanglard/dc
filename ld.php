@@ -128,7 +128,7 @@ The path <code>/usr/bin/ld</code> is not enough to tell which one it is. But we 
 
 </p>
 
-<pre><b>$</b> ll /usr/bin/ld
+<pre><b>$</b> ls -l /usr/bin/ld
 lrwxrwxrwx 1 root root 20 Nov  2 13:58 /usr/bin/ld -> aarch64-linux-gnu-ld*
 <b>$</b> /usb/bin/ld --version
 GNU ld (GNU Binutils for Ubuntu) 2.38
