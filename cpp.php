@@ -52,7 +52,7 @@ clang -cc1 <span class="r">-E</span> -o hello.tu hello.c
 
 <h2>How much pre-processing occurs?</h2>
 <p>
-A lot of work is done by <code>cpp</code>! So much in fact that the preprocessor is a bottleneck in big projects. Just to get an idea, see how the six lines in hello.c become a behemote 748 lines translation unit. 
+A lot of work is done by <code>cpp</code>! So much in fact that the preprocessor is a bottleneck in big projects. Just to get an idea, see how the six lines in hello.c become a behemoth 748 lines translation unit. 
 </p>
 <pre><b>$</b> <span class="r">wc -l</span> hello.c
  <span class="r">6</span>  hello.c</pre>
