@@ -203,14 +203,12 @@ ld -o a.out hello.o <span class="r">foo bar</span>
 </p>
 <pre>
 <b>$</b> gcc -v hello.c
-COLLECT_GCC_OPTIONS=...
- as -v -EL -mabi=lp64 -o /tmp/ccUkKMFH.o /tmp/ccCKUy4c.s
-COMPILER_PATH==...
-COLLECT_GCC_OPTIONS=...
- /usr/lib/gcc/aarch64-linux-gnu/11/collect2 /tmp/ccIPliNQ.o
+ cc1 hello.c -o /tmp/ccCKUy4c.s
+ as -o /tmp/ccUkKMFH.o /tmp/ccCKUy4c.s
+ collect2 /tmp/ccUkKMFH.o
 </pre>
 <p>
-It is a lot harder to read but we can still make out that an assembler step <code>as</code> took place, followed by a linking step via <code>collect2</code>. The call to the compiler via flag <code>-cc1</code> however is not featured.
+It is a lot harder to read but we can still make out that a compiler step <code>cc1</code> took place, followed by an assembler step <code>as</code>, followed by a linking step via <code>collect2</code>.
 </p>
 </div>
 
