@@ -52,7 +52,7 @@ clang -cc1 <span class="r">-E</span> -o hello.tu hello.c
 
 <h2>How much pre-processing occurs?</h2>
 <p>
-A lot of work is done by <code>cpp</code>! So much in fact that the preprocessor is a bottleneck in big projects. Just to get an idea, see how the six lines in hello.c become a behemote 748 lines translation unit. 
+A lot of work is done by <code>cpp</code>! So much in fact that the preprocessor is a bottleneck in big projects. Just to get an idea, see how the six lines in hello.c become a behemoth 748 lines translation unit. 
 </p>
 <pre><b>$</b> <span class="r">wc -l</span> hello.c
  <span class="r">6</span>  hello.c</pre>
@@ -196,7 +196,7 @@ int fibonacci(int n) {
 }</pre>
 
 
-<p> Adding the definition allows the compiler to work in one pass.</p>
+<p>Adding the declaration allows the compiler to work in one pass.</p>
 
 <pre>
 <b>$</b> clang -c good_fibonacci.c // It worked
@@ -219,7 +219,7 @@ int <span class="b">function2</span>(int x) {
   return 2;
 }</pre>
 
-<p>The solution is to adopt a convention where definitions are put in header files and the declaration in the source files. This way, programmers are free to organize their source code as they please.</p>
+<p>The solution is to adopt a convention where declarations are put in header files and the definitions in the source files. This way, programmers are free to organize their source code as they please.</p>
 
 
 <table style="width: 100%;">

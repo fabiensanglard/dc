@@ -160,7 +160,7 @@ hello world
     not a dynamic executable
 </pre>
 
-<div class="t"> Another good time investment of time is to learn how to bring up <code>man</code> and search it with <code>:/</code>. <code>man</code> is a treasure trove of information about executables such as <code>bintools</code>, syscalls and C functions. Manual pages are organized in categories indexed by a number.
+<div class="t"> Another good time investment of time is to learn how to bring up <code>man</code> and search it with <code>/</code>. <code>man</code> is a treasure trove of information about executables such as <code>bintools</code>, syscalls and C functions. Manual pages are organized in categories indexed by a number.
 <pre><b>$</b> man <span class="r">1</span> nm   // Show <span class="r">CLI</span>     nm   documentation
 <b>$</b> man <span class="b">2</span> read // Show <span class="b">syscall</span> read documentation
 <b>$</b> man <span class="g">3</span> getc // Show <span class="g">libc</span>    getc documentation</pre>
