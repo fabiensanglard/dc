@@ -43,7 +43,7 @@ information for a processes' program image. Relocation entries are these data.
 <pre><b>$</b> clang -c x.c y.c
 <b>$</b> <span class="r">ar</span> -rv foolib.a x.o y.o
 </pre>
-<p>If you ever build a static library, don't forget to run <code>ranlib</code> on it. It builds an index which speeds up linking.
+<p>In the good old days you needed to run <code>ranlib</code> on it in order to build an index which speeds up the linking process. Nowadays the default behavior of <code>ar</code> was changed to build this index by default.
 </div>
 
 <p>Again, this article is only a high-level overview. If you want to deepen your knowledge of linkers, an excellent book on the topic is <a href="https://amzn.to/3z0ArWr">Linkers and Loaders</a> by John R. Levine.
