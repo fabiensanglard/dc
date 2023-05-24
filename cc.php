@@ -1013,15 +1013,15 @@ void do_nothing() {
 
 
 	<pre>
-<b>$</b> gcc -c main.c -o main.o
-<b>$</b> file main.o
-main.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped
-<b>$</b> gcc  -c main.c -o main.o <span class="r">-flto</span>
-<b>$</b> file main.o
+<b>$</b> gcc -c opt_main.c -o opt_main.o
+<b>$</b> file opt_main.o
+opt_main.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped
+<b>$</b> gcc -c opt_main.c -o opt_main.o <span class="r">-flto</span>
+<b>$</b> file opt_main.o
 <span class="r">main.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped</span></pre>
 
 <pre>
-<b>$</b> gcc main.c do_nothing.c <span class="r">-flto</span>
+<b>$</b> gcc opt_main.c do_nothing.c <span class="r">-flto</span>
 <b>$</b> time ./a.out
 
 real	0m2.112s
@@ -1064,17 +1064,17 @@ void do_nothing() {
 	   </tr>
 	 </table>
 
-	 <pre><b>$</b> clang -c main.c -o main.o
-<b>$</b> file main.o
-main.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped
-<b>$</b> clang -c main.c -o main.o <span class="r">-flto</span>
-<b>$</b> file main.o
-<span class="r">hello.o: LLVM IR bitcode</span></pre>
+	 <pre><b>$</b> clang -c opt_main.c -o opt_main.o
+<b>$</b> file opt_main.o
+opt_main.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped
+<b>$</b> clang -c opt_main.c -o opt_main.o <span class="r">-flto</span>
+<b>$</b> file opt_main.o
+<span class="r">opt_main.o: LLVM IR bitcode</span></pre>
 
 
 
 <pre>
-<b>$</b> clang main.c do_nothing.c <span class="r">-flto</span>
+<b>$</b> clang opt_main.c do_nothing.c <span class="r">-flto</span>
 <b>$</b> time ./a.out
 
 real	0m2.112s
