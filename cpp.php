@@ -641,7 +641,7 @@ void render(World &worldv) {
 </tr>
 </table>
 
-<p>Since we now prevent muptile header inclusipon in the same TU, we can compile the whole project.</p>
+<p>Since we now prevent multiple header inclusipon in the same TU, we can compile the whole project.</p>
 
 <pre><b>$</b> clang -c -o render.o render.cc
 <b>$</b> clang -c -o ai.o ai.cc  
