@@ -473,6 +473,9 @@ Inspecting the resulting TUs with <code>cpp</code> shows the problem.
 <span class="r">struct World {
 };</span> 
 
+<span class="r">struct World {
+};</span> 
+
 
 void render(World& world);
 
@@ -492,6 +495,9 @@ void hostFrame(World& world) {
 </td>
 <td>
 <pre><b>$</b> cpp ai.cc
+
+
+
 
 struct World {
 }; 
@@ -516,6 +522,9 @@ void think(World& world) {
 <td>
 <pre><b>$</b> cpp render.cc
 
+
+
+
 struct World {
 }; 
 
@@ -539,7 +548,7 @@ void render(World &world) {
 </tr>
 </table>
 
-<p><code>engine.cc</code> includes <code>engine.h</code>. However <code>engine.cc</code> also includes <code>ai.h</code> which in turns also includes <code>engine.h</code>. In the final <code>cpp</code>ed translation unit, <code>engine.h</code> is included twice and the struct <code>World</code> is declared twice.
+<p><code>engine.cc</code> includes <code>engine.h</code>. However <code>engine.cc</code> also includes <code>ai.h</code> which in turns also includes <code>engine.h</code>. In the final <code>cpp</code>ed translation unit, <code>engine.h</code> is included three times and the struct <code>World</code> is declared three times as well.
 </p>
 
 <p>
