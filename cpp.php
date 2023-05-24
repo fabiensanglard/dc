@@ -446,11 +446,25 @@ void render(World &worldv) {
 <b>$</b> clang -c -o ai.o ai.cc  
 <b>$</b> clang -c -o engine.o engine.cc
 In file included from engine.cc:4:
+In file included from ./render.h:3:
+<span class="r">./engine.h:3:8: error: redefinition of 'World'
+struct World {
+       ^</span>
+engine.cc:3:10: note: './engine.h' included multiple times, additional include site here
+#include "engine.h"
+         ^
+./render.h:3:10: note: './engine.h' included multiple times, additional include site here
+#include "engine.h"
+         ^
+./engine.h:3:8: note: unguarded header; consider using #ifdef guards or #pragma once
+struct World {
+       ^
+In file included from engine.cc:5:
 In file included from ./ai.h:3:
 <span class="r">./engine.h:3:8: error: redefinition of 'World'
 struct World {
        ^</span>
-./render.h:3:10: note: './engine.h' included multiple times, additional include site here
+engine.cc:3:10: note: './engine.h' included multiple times, additional include site here
 #include "engine.h"
          ^
 ./ai.h:3:10: note: './engine.h' included multiple times, additional include site here
@@ -459,7 +473,7 @@ struct World {
 ./engine.h:3:8: note: unguarded header; consider using #ifdef guards or #pragma once
 struct World {
        ^
-1 error generated.
+2 errors generated.
 </pre>
 
 <p>
