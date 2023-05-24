@@ -219,8 +219,8 @@ Let's take a look at what happens when a project is made of multiple C files.
 
 <pre><b>$</b> clang -v <span class="r">hello</span>.c <span class="b">foo</span>.c <span class="g">bar</span>.c
 clang -cc1 <span class="r">hello</span>.c -o <span class="r">hello</span>.o     // Compile
-clang -cc1 <span class="b">foo</span>.c -o <span class="b">foo</span>.o         // Compile
-clang -cc1 <span class="g">bar</span>.c -o <span class="g">bar</span>.o         // Compile
+clang -cc1 <span class="b">foo</span>.cpp -o <span class="b">foo</span>.o       // Compile
+clang -cc1 <span class="g">bar</span>.m -o <span class="g">bar</span>.o         // Compile
 
 ld -o a.out hello.o foo.o bar.o    // Link
 </pre>
