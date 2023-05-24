@@ -1081,6 +1081,7 @@ real	0m2.112s
 user	0m2.107s
 sys	0m0.004s
 <b>$</b> clang <span class="b">-O3</span> <span class="r">-flto</span> -c hello.c -o hello.o
+<b>$</b> time ./a.out
 
 real	<span class="b">0m0.002s</span>
 user	0m0.000s
