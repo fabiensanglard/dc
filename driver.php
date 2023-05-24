@@ -218,12 +218,15 @@ Let's take a look at what happens when a project is made of multiple C files.
 </p>
 
 <pre><b>$</b> clang -v <span class="r">hello</span>.c <span class="b">foo</span>.c <span class="g">bar</span>.c
-clang -cc1 <span class="r">hello</span>.c -o <span class="r">hello</span>.o     // Compile
-clang -cc1 <span class="b">foo</span>.cpp -o <span class="b">foo</span>.o       // Compile
-clang -cc1 <span class="g">bar</span>.m -o <span class="g">bar</span>.o         // Compile
+clang -cc1 -c <span class="r">hello</span>.c -o <span class="r">hello</span>.o     // Compile
+clang -cc1 -c <span class="b">foo</span>.cpp -o <span class="b">foo</span>.o       // Compile
+clang -cc1 -c <span class="g">bar</span>.m -o <span class="g">bar</span>.o         // Compile
 
 ld -o a.out hello.o foo.o bar.o    // Link
 </pre>
+
+<div class="t"> Running <code>clang</code> in compilation mode via <code>-cc1</code> is not enough to emit object files. The flag <code>-c</code> (or its equivalent <code>-emit-obj</code>) is also necessary.</div>
+
 
 <p>
 The driver turned three source files into three object files before linking them together into an executable. The verbose mode shows the compilation steps in sequence but it is important to understand they are in fact completely independent from each other. Looking at a dependency graph explains it better.
