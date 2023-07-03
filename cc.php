@@ -155,8 +155,8 @@ void bar() {
 
 <p>Let's look at the exported and imported symbols with <code>nm</code>.</p>
 
-<pre><b>$</b> clang -c  mult.c -o mult.o
-<b>$</b> <span class="r">nm</span> mult.o
+<pre><b>$</b> clang -c importExport.c -o importExport.o
+<b>$</b> <span class="r">nm</span> importExport.o
 0000000000000000 T bar
                  U foo
                  U myConstant
@@ -1013,21 +1013,21 @@ void do_nothing() {
 
 
 	<pre>
-<b>$</b> gcc -c main.c -o main.o
-<b>$</b> file main.o
+<b>$</b> gcc -c opt_main.c -o opt_main.o
+<b>$</b> file opt_main.o
 main.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped
-<b>$</b> gcc  -c main.c -o main.o <span class="r">-flto</span>
-<b>$</b> file main.o
+<b>$</b> gcc -c opt_main.c -o opt_main.o <span class="r">-flto</span>
+<b>$</b> file opt_main.o
 <span class="r">main.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped</span></pre>
 
 <pre>
-<b>$</b> gcc main.c do_nothing.c <span class="r">-flto</span>
+<b>$</b> gcc <span class="r">-flto</span> opt_main.c do_nothing.c
 <b>$</b> time ./a.out
 
 real	0m2.112s
 user	0m2.107s
 sys	0m0.004s
-<b>$</b> gcc <span class="b">-O3</span> <span class="r">-flto</span> -c hello.c -o hello.o
+<b>$</b> gcc <span class="b">-O3</span> <span class="r">-flto</span> opt_main.c do_nothing.c
 <b>$</b> time ./a.out
 
 real	<span class="b">0m0.002s</span>
@@ -1064,23 +1064,23 @@ void do_nothing() {
 	   </tr>
 	 </table>
 
-	 <pre><b>$</b> clang -c main.c -o main.o
-<b>$</b> file main.o
+	 <pre><b>$</b> clang -c opt_main.c -o opt_main.o
+<b>$</b> file opt_main.o
 main.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped
-<b>$</b> clang -c main.c -o main.o <span class="r">-flto</span>
-<b>$</b> file main.o
+<b>$</b> clang -c opt_main.c -o opt_main.o <span class="r">-flto</span>
+<b>$</b> file opt_main.o
 <span class="r">hello.o: LLVM IR bitcode</span></pre>
 
 
 
 <pre>
-<b>$</b> clang main.c do_nothing.c <span class="r">-flto</span>
+<b>$</b> clang <span class="r">-flto</span> opt_main.c do_nothing.c
 <b>$</b> time ./a.out
 
 real	0m2.112s
 user	0m2.107s
 sys	0m0.004s
-<b>$</b> clang <span class="b">-O3</span> <span class="r">-flto</span> -c hello.c -o hello.o
+<b>$</b> clang <span class="b">-O3</span> <span class="r">-flto</span> opt_main.c do_nothing.c
 <b>$</b> time ./a.out
 
 real	<span class="b">0m0.002s</span>
