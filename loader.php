@@ -106,7 +106,15 @@ The list of dynamic libraries where these undefined symbols will be searched can
 	libc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000ffff8dc70000)
 	/lib/ld-linux-aarch64.so.1 (0x0000ffff8de62000)</pre>
 
-<p>An alternative way, more concise, it to look at the dynamic section and keep only <code>NEEDED</code> entries.</p>
+<p>Keep in mind that <code>ldd</code> is a convenient <a href="https://stuff.mit.edu/afs/sipb/project/phone-project/bin/arm-linux-ldd">script</a> which merely invokes <code>ld</code> on the current system.</p>
+
+  <pre><b>$</b> <span class="r">LD_TRACE_LOADED_OBJECTS=1</span> <span class="b">ld</span> a.out
+  linux-vdso.so.1 (0x0000ffff8de9b000)
+  libc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000ffff8dc70000)
+  /lib/ld-linux-aarch64.so.1 (0x0000ffff8de62000)</pre>
+
+
+<p>In you are analyzing a file built for another system, it may fail. In this case you may want to look up the dynamic section and keep only <code>NEEDED</code> entries.</p>
 
 
 <pre><b>$</b> readelf -d a.out | grep 'NEEDED'
