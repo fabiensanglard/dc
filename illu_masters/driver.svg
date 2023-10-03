@@ -151,7 +151,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4810403"
-     inkscape:cx="435.16709"
+     inkscape:cx="423.68867"
      inkscape:cy="90.139343"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -205,7 +205,7 @@
          id="tspan837"
          x="14.483951"
          y="38.988205"
-         style="font-size:4.23333px;writing-mode:lr-tb;stroke-width:0.264583">hello.c</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';writing-mode:lr-tb;stroke-width:0.264583">hello.c</tspan></text>
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect835-7"
@@ -264,7 +264,7 @@
          id="tspan837-3"
          x="195.03313"
          y="39.715237"
-         style="font-size:4.23333px;writing-mode:lr-tb;stroke-width:0.264583">a.out</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';writing-mode:lr-tb;stroke-width:0.264583">a.out</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583"
@@ -275,7 +275,7 @@
          id="tspan837-4"
          x="135.63852"
          y="39.314774"
-         style="font-size:4.23333px;writing-mode:lr-tb;stroke-width:0.264583">hello.o</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';writing-mode:lr-tb;stroke-width:0.264583">hello.o</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583"
@@ -286,10 +286,10 @@
          id="tspan837-9"
          x="76.68502"
          y="38.778831"
-         style="font-size:4.23333px;writing-mode:lr-tb;stroke-width:0.264583">hello.tu</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';writing-mode:lr-tb;stroke-width:0.264583">hello.tu</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:3.52778px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583"
+       style="font-size:3.52778px;line-height:1.25;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
        x="46.192116"
        y="22.116478"
        id="text839-7"><tspan
@@ -297,7 +297,7 @@
          id="tspan837-0"
          x="46.192116"
          y="22.116478"
-         style="font-size:3.52778px;writing-mode:lr-tb;stroke-width:0.264583">preprocessor</tspan></text>
+         style="font-size:3.52778px;writing-mode:lr-tb;stroke-width:0.264583;-inkscape-font-specification:'Roboto Mono';font-family:'Roboto Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">preprocessor</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.52778px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583"
@@ -308,7 +308,7 @@
          id="tspan837-0-8"
          x="106.23145"
          y="22.007343"
-         style="font-size:3.52778px;writing-mode:lr-tb;stroke-width:0.264583">compiler</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';writing-mode:lr-tb;stroke-width:0.264583">compiler</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.52778px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583"
@@ -319,7 +319,7 @@
          id="tspan837-0-5"
          x="166.43546"
          y="22.185991"
-         style="font-size:3.52778px;writing-mode:lr-tb;stroke-width:0.264583">linker</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';writing-mode:lr-tb;stroke-width:0.264583">linker</tspan></text>
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect963-8-4-0"
@@ -338,7 +338,7 @@
          id="tspan837-0-5-7"
          x="166.67047"
          y="37.305794"
-         style="font-size:3.52778px;writing-mode:lr-tb;stroke-width:0.264583">libs</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';writing-mode:lr-tb;stroke-width:0.264583">libs</tspan></text>
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect963-8-4-0-7"
@@ -357,7 +357,7 @@
          id="tspan837-0-5-7-2"
          x="45.782223"
          y="36.438881"
-         style="font-size:3.52778px;writing-mode:lr-tb;stroke-width:0.264583">headers</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';writing-mode:lr-tb;stroke-width:0.264583">headers</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL)"
        d="m 25.401737,21.437635 h 4.673455"

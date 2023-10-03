@@ -235,8 +235,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.3958031"
-     inkscape:cx="421.62107"
-     inkscape:cy="196.66098"
+     inkscape:cx="409.4417"
+     inkscape:cy="197.37741"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -280,7 +280,7 @@
        ry="1.9651159" />
     <text
        xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
        x="30.336332"
        y="15.910604"
        id="text839-8-4-4"><tspan
@@ -288,7 +288,7 @@
          id="tspan837-4-8-8"
          x="30.336332"
          y="15.910604"
-         style="font-size:4.23333px;writing-mode:lr-tb;stroke-width:0.264583">main.o</tspan></text>
+         style="font-size:4.23333px;writing-mode:lr-tb;stroke-width:0.264583;-inkscape-font-specification:'Roboto Mono';font-family:'Roboto Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">main.o</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect963-8-4-0-2-8-5"
@@ -299,7 +299,7 @@
        ry="1.9651159" />
     <text
        xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
        x="178.13297"
        y="30.348486"
        id="text839-8-4-4-9"><tspan
@@ -307,7 +307,7 @@
          id="tspan837-4-8-8-7"
          x="178.13297"
          y="30.348486"
-         style="font-size:4.23333px;writing-mode:lr-tb;stroke-width:0.264583">static.o</tspan></text>
+         style="font-size:4.23333px;writing-mode:lr-tb;stroke-width:0.264583;-inkscape-font-specification:'Roboto Mono';font-family:'Roboto Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">static.o</tspan></text>
     <g
        id="g233-3"
        transform="translate(-143.93371,-23.733723)" />
@@ -321,7 +321,7 @@
        ry="1.9651159" />
     <text
        xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
        x="99.713959"
        y="35.055794"
        id="text14208"><tspan
@@ -329,7 +329,7 @@
          id="tspan14206"
          x="99.713959"
          y="35.055794"
-         style="font-size:4.23333px;writing-mode:lr-tb;stroke-width:0.264583">dynamic.so</tspan></text>
+         style="font-size:4.23333px;writing-mode:lr-tb;stroke-width:0.264583;-inkscape-font-specification:'Roboto Mono';font-family:'Roboto Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">dynamic.so</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect14204-6"
@@ -340,7 +340,7 @@
        ry="1.9651159" />
     <text
        xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
        x="177.94342"
        y="16.321316"
        id="text14208-2"><tspan
@@ -348,7 +348,7 @@
          id="tspan14206-5"
          x="177.94342"
          y="16.321316"
-         style="font-size:4.23333px;writing-mode:lr-tb;stroke-width:0.264583">static.a</tspan></text>
+         style="font-size:4.23333px;writing-mode:lr-tb;stroke-width:0.264583;-inkscape-font-specification:'Roboto Mono';font-family:'Roboto Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">static.a</tspan></text>
     <path
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.465;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleOutL-3-1-1)"
        d="m 42.337705,14.475382 116.956265,0"
