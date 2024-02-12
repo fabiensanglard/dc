@@ -217,7 +217,7 @@ It is a lot harder to read but we can still make out that a compiler step <code>
 Let's take a look at what happens when a project is made of multiple C files.
 </p>
 
-<pre><b>$</b> clang -v <span class="r">hello</span>.c <span class="b">foo</span>.c <span class="g">bar</span>.c
+<pre><b>$</b> clang -v <span class="r">hello</span>.c <span class="b">foo</span>.cpp <span class="g">bar</span>.m
 clang -cc1 -c <span class="r">hello</span>.c -o <span class="r">hello</span>.o     // Compile
 clang -cc1 -c <span class="b">foo</span>.cpp -o <span class="b">foo</span>.o       // Compile
 clang -cc1 -c <span class="g">bar</span>.m -o <span class="g">bar</span>.o         // Compile
