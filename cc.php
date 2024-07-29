@@ -293,7 +293,7 @@ int <span class="r">getNumber</span>() {
   </tr>
 </table>
 
-<p>By default all symbols are strong. In this example, the linker fails because it does not know which <code>getNumber</code> to pick. when it is used in <code>weak.c</code>.</p>
+<p>By default all symbols are strong. In this example, the linker fails because it does not know which <code>getNumber</code> to pick when it is used in <code>weak.c</code>.</p>
 
 <pre><b>$</b> clang -o weak weak.c number1.c number2.c
   /usr/bin/ld: number2.o: in function `getNumber':
