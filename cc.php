@@ -39,7 +39,7 @@
  <li>A Frontend which ingest the text and transform it into an Intermediate Representation (IR).</li>
 
  <li>An Optimizer which iterates on the IR with a collection of optimizations.</li>
- <li>A Backend which generates machine specific instructions. <code>gcc</code> generates assembly and convert it to machine code with <code>binutils</code>'s <code>as</code> while <code>clang</code> has the assembling fully built-in.</li>
+ <li>A Backend which generates machine specific instructions. <code>gcc</code> generates assembly and converts it to machine code with <code>binutils</code>'s <code>as</code> while <code>clang</code> has the assembling fully built-in.</li>
 	</ul>
 
 
