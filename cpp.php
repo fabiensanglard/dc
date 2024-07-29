@@ -842,7 +842,7 @@ hello.o: hello.c /usr/include/stdio.h /usr/include/_types.h
   /usr/include/secure/_stdio.h /usr/include/secure/_common.h
 </pre>
 
-<div class="t"> The notoriously blazing fast build system <code>ninja</code> leverages these dependencies outputs to create a dependency graph. After the first compilation, the dependency graph is parsed. On each subsequent build, file modification timestamps it checked to re-build only what has changed.
+<div class="t"> The notoriously blazing fast build system <code>ninja</code> leverages these dependencies outputs to create a dependency graph. After the first compilation, the dependency graph is parsed. On each subsequent build, file modification timestamps are checked to re-build only what has changed.
 </div>
 
 
