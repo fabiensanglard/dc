@@ -21,7 +21,7 @@ I blame this experience on the lack of literature on the topic. Most language bo
 
 <pre>#include &lt;stdio.h&gt;
 
-main()
+int main()
 {
     printf("hello, world\n");
 } </pre>
