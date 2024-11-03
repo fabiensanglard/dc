@@ -9,7 +9,7 @@ I remember how pleasant it was to learn to program in C. There were so many good
 </p>
 
 <p>
-It was an equally enjoyable experience when I took on C++. I found myself unable to put down the <a href="https://amzn.to/3IWgTIO">Effective C++</a> series by Scott Meyers. I loved the simple layout and the astute usage of red text for emphasis. I must have read half the first volume while standing in the bookstore before I left with the complete series under my arm. I remember power walking to my place to keep on reading.
+It was an equally enjoyable experience when I took on C++. I found myself unable to put down the <a href="https://amzn.to/3IWgTIO">Effective C++</a> series by Scott Meyers. I loved the simple layout and the astute usage of red text for emphasis. I must have read half the first volume while standing in <a href="https://en.wikipedia.org/wiki/World%27s_Biggest_Bookstore">Toronto World's Biggest Bookstore</a> before I left with the complete series under my arm. I remember power walking to my place to keep on reading.
 </p>
 
 <p>
