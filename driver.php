@@ -177,6 +177,8 @@ If you forget which one is which, you can request the manual about the manual.
 
 </div>
 
+<div class="t"> Besides <code>binutils</code>, there is another collection of tools which you should spend time mastering. <code>coreutils</code> contains commands such as <code>cat,</code> <code>rm</code>, and others <code>wc</code>. Bash is the swiss army knife of the Unix world. Not only it will help your study compilers and build systems, it will serve you in any type of programming environment. Don't be afraid to spend time studying it. I highly recommend <i><a href="../bash/">Efficient Linux at the Command Line</a> by Daniel J. Barrett if you elect to pursue this endeavor.
+</div>
 
 
 
