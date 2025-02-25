@@ -285,7 +285,7 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 <p>In our example the piece of assembly in charge of initialization is called <code>Scrt1.s</code>. Only when everything is ready, the function  <code>__start</code> calls <code>main</code>,
 
 
-<code>Scrt1.s</code> can also sometimes be found named <code>ctr0</code>. In both cases, the name is derived from <b>C</b> <b>R</b>un<b>T</b>ime.</p>
+<code>Scrt1.s</code> can also sometimes be found named <code>crt0</code>. In both cases, the name is derived from <b>C</b> <b>R</b>un<b>T</b>ime.</p>
 
 
 <p>Likewise, a program execution does not end after <code>main</code> returns. It is easy to verify using <code>atexit</code> function which is executed by the C runtime after main returns.</p>
