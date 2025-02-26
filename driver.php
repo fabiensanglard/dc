@@ -58,7 +58,7 @@ Second, even though three stages were mentioned earlier, we only see two command
 
 
 <p>
-Lastly, and perhaps most importantly, we see the linker <code>ld</code> invocation. Wouldn't it be more efficient to include the linker in the driver, the same way <code>cpp</code> is embedded? No, because of two reasons.
+Lastly, and perhaps most importantly, we see the linker <code>ld</code> invocation. Wouldn't it be more efficient to include the linker in the compiler, the same way <code>cpp</code> is embedded? No, because of two reasons.
 </p>
 <ol>
 <li>The compiler ingests one <code>.c</code> and outputs one <code>.o</code>. It has a low memory footprint. The linker on the other side, must use all the <code>.o</code> files at once to generate the executable. Keeping all these <code>.o</code> in memory would stress the system too much on big projects.</li> 
