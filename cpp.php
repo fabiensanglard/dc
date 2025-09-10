@@ -744,7 +744,7 @@ void render(World &world) {
 
 <h2>Header Search Path</h2>
 <p>
-  By default, the preprocessor first attempts to locate the target of <code>#include</code> directives in the same directory as the source file. If that fails, the preprocessor goes though the "header search path". Let's take the example of a simple <code>hello_world.c</code> project which uses an include for the string value to <code>printf</code>
+  By default, the preprocessor first attempts to locate the target of <code>#include</code> directives in the same directory as the source file. If that fails, the preprocessor goes through the "header search path". Let's take the example of a simple <code>hello_world.c</code> project which uses an include for the string value to <code>printf</code>
 </p>
 
 <table>
