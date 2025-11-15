@@ -500,7 +500,7 @@ int main() {
 #include "template.h"
 
 const char* foo() {
-  Name<const char*> name;
+  Name&lt;const char*&gt; name;
   return name.get();
 }
 
@@ -516,7 +516,7 @@ const char* foo() {
 #include "template.h"
 
 const char* bar() {
-  Name<const char*> name;
+  Name&lt;const char*&gt; name;
   return name.get();
 }
 
