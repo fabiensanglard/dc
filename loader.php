@@ -122,9 +122,25 @@ The list of dynamic libraries where these undefined symbols will be searched can
 	</pre>
 
 
-<div class="t"> The interpreter used to load an <code>.so</code> is not necessarily the same as the one used to load the "main" program. All <code>.so</code> have a hard-coded interpreter path.
+<div class="t"> The same interpreter is used to load a program and each of its <code>.so</code> dependencies. However, some dynamic libraries, like <code>libc.so.6</code>, have an <code>.interp</code> section. This allows for the lib to output its versions.
 </div>
 
+<pre>
+<b>$</b> libc.so.6
+GNU C Library (Ubuntu GLIBC 2.35-0ubuntu3.8) stable release version 2.35.
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+Compiled by GNU CC version 11.4.0.
+Available extensions:
+  crypt add-on version 2.1 by Michael Glad and others
+  GNU Libidn2 by Simon Josefsson
+  Native POSIX Threads Library by Ulrich Drepper et al
+  BIND-8.2.3-T5B
+  libc ABIs: UNIQUE IFUNC ABSOLUTE
+For bug reporting instructions, please see:
+&lt;https://bugs.launchpad.net/ubuntu/+source/glibc&gt;.</pre>
 
 <h2>Symbols relocation</h2>
 <p>When everything is properly mapped to memory, the loader performs symbol relocation. This is something we already looked at in the linker when this data was being generated. We can recognize here the name of the undefined symbols <code>nm</code> revealed to us.</p>
