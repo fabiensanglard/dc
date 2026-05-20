@@ -219,15 +219,19 @@ It is a lot harder to read but we can still make out that a compiler step <code>
 Let's take a look at what happens when a project is made of multiple C files.
 </p>
 
-<pre><b>$</b> clang -v <span class="r">hello</span>.c <span class="b">foo</span>.cpp <span class="g">bar</span>.m
-clang -cc1 -c <span class="r">hello</span>.c -o <span class="r">hello</span>.o     // Compile
-clang -cc1 -c <span class="b">foo</span>.cpp -o <span class="b">foo</span>.o       // Compile
-clang -cc1 -c <span class="g">bar</span>.m -o <span class="g">bar</span>.o         // Compile
+<pre><b>$</b> clang -v -c <span class="r">hello</span>.c <span class="b">foo</span>.cpp <span class="g">bar</span>.m
+clang -cc1 -emit-obj <span class="r">hello</span>.c -o <span class="r">hello</span>.o     // Compile
+clang -cc1 -emit-obj <span class="b">foo</span>.cpp -o <span class="b">foo</span>.o       // Compile
+clang -cc1 -emit-obj <span class="g">bar</span>.m -o <span class="g">bar</span>.o         // Compile
 
 ld -o a.out hello.o foo.o bar.o    // Link
 </pre>
 
-<div class="t"> Running <code>clang</code> in compilation mode via <code>-cc1</code> is not enough to emit object files. The flag <code>-c</code> (or its equivalent <code>-emit-obj</code>) is also necessary.</div>
+<div class="t"> Notice how the <code>clang</code> driver detected the <code>-c</code> flag and translated it into <code>-emit-obj</code> when invoking the compiler (<code>-cc1</code>). Invoking the compiler directly with <code>clang -cc1 -c</code> to generate an <code>obj</code> is an error.
+<pre>
+$ clang -cc1 -c hello.c -o hello.o     // Error
+<span class="r">error: unknown argument: '-c'</span>
+</pre> </div>
 
 
 <p>
